@@ -1,0 +1,32 @@
+\section{W2: Processes, threads}
+\textbf{Why processes?} Simultaneous execution of multiple programs on single CPU.\\
+\textbf{Why threads?} Simultaneous execution of multiple parts of a program on single CPU. Threads share global variables and heap memory.\\
+
+\subsection{Interprocess Communication}
+\textit{Process/Thread Synchronization} Race conditions occur when multiple processes/threads access shared data and try to change it at the same time.\\
+\textbf{Critical region:} code segment where shared data is accessed.\\
+\textbf{Mutual exclusion:} only one process/thread can be in critical region at a time.\\
+\begin{enumerate}
+    \item No two processes/threads may be simultaneously inside their critical regions.
+    \item No assumptions may be made about speeds or the number of CPUs.
+    \item No process/thread running outside its critical region may block other processes/threads.
+    \item No process/thread should have to wait forever to enter its critical region.
+\end{enumerate}
+
+\subsubsection{Possible approaches to mutual exclusion}
+\textbf{Busy waiting:} process/thread stays in loop in kernel mode until it can enter critical region. Pros: simple, no context switch. Cons: wastes CPU time, starvation (Priority Inversion Problem).\\
+\begin{enumerate}
+    \item \textbf{Lock variables:} each process/thread has a lock variable. Process/thread can enter critical region only if its lock variable is 0.\\
+    \item \textbf{Strict alternation:} processes/threads take turns entering critical region.\\
+    \item \textbf{Peterson's solution:} two processes/threads, two lock variables.\\
+    \item \textbf{Test-and-set (TSL):} atomic instruction that sets lock variable to 1 and returns old value.\\
+\end{enumerate}
+
+\subsubsection{Deadlocks}
+Four conditions for deadlock:
+\begin{enumerate}
+    \item \textbf{Mutual exclusion:} only one process/thread can use a resource at a time.
+    \item \textbf{Hold and wait:} processes/threads hold resources while waiting for others.
+    \item \textbf{No preemption:} resources can be released only voluntarily by process/thread holding it.
+    \item \textbf{Circular wait:} two or more processes/threads form a circular chain where each process/thread waits for a resource held by next process/thread in chain.
+\end{enumerate}

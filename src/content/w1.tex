@@ -1,22 +1,18 @@
-\section{Operating systems, processes, threads}
+\section{W1: Operating systems}
+\textbf{CPU cycle:} fetch, decode, execute, store.\\
+\textbf{Registers:} hold variables and temporary results.\\
+\textbf{Special registers:} program counter (PC), stack pointer (SP), program status word (PSW).\\
+\textbf{User mode:} restricted access to memory and instructions.\\
+\textbf{Kernel mode:} full access to the above.\\
+\textbf{Memory stack:}\\
+\includegraphics[width=\linewidth]{figs/memory-stack.png}
 
-
-\subsection{xCode}
-Subsection text
-
-\section{Section 2}
-Text 2
-
-\section{Section 3}
-Etc.
-
-\section{Title of section 1}
-
-\subsection*{Title of subsection 1}
-Some text...
-
-\subsection*{Title of subsection 2}
-With some colored math $\sum_{i=1}^\infty i$.
-
-% Inserting an image also works:\\
-% \includegraphics[width=\linewidth]{figs/yourimage.png}
+\subsection{System Calls}
+\begin{enumerate}
+    \item Put system call number in register of OS.
+    \item Execute trap instruction (switch to kernel mode).
+    \item OS executes system call from fixed address in kernel memory.
+    \item The kernel code that starts following the trap instruction is called the \textbf{trap handler}. Trap handler examines the system call number and dispatches the correct system-call handle.
+    \item System call handler runs.
+    \item Return to user mode.
+\end{enumerate}
