@@ -1,0 +1,17 @@
+\section{W3: Scheduling, memory management}
+\textbf{Preemption:} Preemptive scheduling is when the scheduler decides to switch to another process/thread. Clock interrupts used upon a quantum. Non-preemptive scheduling is when the process/thread itself decides to give up the CPU or is blocked.\\
+\textbf{Context switch:} Switching from one process/thread to another is expensive.\\
+
+\subsection{Non-preemptive scheduling}
+\textbf{First-come, first-served (FCFS):} Simple, but long average waiting time.\\
+\textbf{Shortest job first (SJF):} Shortest average waiting time, but long waiting time for long processes/threads. Average turnaround time is minimized.\\
+
+\subsection{Preemptive scheduling}
+\textbf{Round-robin (RR):} Each process/thread gets a quantum.\\
+\textbf{Shortest remaining time first (SRTF):} Shortest average waiting time, but long waiting time for long processes/threads. Average turnaround time is minimized.\\
+\textbf{Priority scheduling:} Each process/thread has a priority. May lead to starvation.\\
+
+\subsection{Memory management}
+\textbf{Why Memory Management?} Support multiprogramming. Secure isolation between processes/threads and OS memory. Enables virtual memory which allows processes/threads to use more memory than is physically available.\\
+\textbf{No memory abstraction:} Use swap space on disk. Multiplex physical memory.\\
+\textbf{Memory abstraction:} 
