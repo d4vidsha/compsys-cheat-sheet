@@ -22,11 +22,9 @@
 \textbf{Memory management unit (MMU):} hardware device that maps logical addresses to physical addresses.\\
 \textbf{Manage free memory:} using bitmap or linked list.\\
 \includegraphics[width=\linewidth]{figs/memory-management.png}
-
-\subsubsection{Virtual memory}
 \textbf{Why virtual memory?} Processes/threads can use more memory than is physically available.\\
 \textbf{Page table:} maps virtual pages to physical pages.\\
 \includegraphics[width=0.4\linewidth]{figs/paging-model.png}
 \includegraphics[width=0.45\linewidth]{figs/mmu-with-tlb.png}\\
 \textbf{Translation Lookaside Buffer (TLB):} cache for page table, faster than main memory, speeds up address translation.\\
-\textbf{Page replacement algorithms for TLB:} \textit{NRU} (Not Recently Used, R and M bit, 4 classes between referenced and modified).\\
+\textbf{Page replacement algorithms for TLB:} \textit{NRU} (Not Recently Used, R and M bit, 4 classes creating combination of referenced and modified).\\
