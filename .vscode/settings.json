@@ -22,6 +22,7 @@
         "MITM",
         "multicol",
         "parallelisable",
+        "QUIC",
         "SRTF"
     ]
 }

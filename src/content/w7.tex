@@ -1,1 +1,24 @@
 \section{W7: Application Layer}
+\textbf{URL/URI:} Uniform Resource Locator/Identifier.\\
+{\tiny \verb|scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]|}\\
+\textbf{HTTP:} HyperText Transfer Protocol.\\
+\begin{itemize}
+    \item \textbf{HTTP/1.0:} one object per TCP connection.
+    \item \textbf{HTTP/1.1:} multiple objects per TCP connection/persistent connections.
+    \item \textbf{HTTP/2:} multiplexing/asynchronous requests over TCP connection, compression, prioritization.
+    \item \textbf{HTTP/3:} QUIC (UDP-based), everything in HTTP/2.
+\end{itemize}
+\textbf{Domain Name System (DNS):} translates domain names to IP addresses.\\
+\begin{itemize}
+    \item \textbf{Domain name space:} tree structure, top-level domain (TLD), second-level domain (SLD), subdomain.
+    \item \textbf{DNS database:} distributed database storing resource records (RR).
+    \item \textbf{Name servers:} each domain has authoritative name server (ANS).
+    \item \textbf{Resolvers:} DNS clients that query name servers in response to client requests.
+\end{itemize}
+\textbf{Mail:} SMTP (Simple Mail Transfer Protocol).\\
+\begin{itemize}
+    \item \textbf{POP3:} Post Office Protocol v3, download and delete from server.
+    \item \textbf{IMAP:} Internet Mail Access Protocol, download without deleting from server. More features than POP3.
+    \item \textbf{MIME:} Multipurpose Internet Mail Extensions, allows non-ASCII attachments.
+\end{itemize}
+\textbf{Remote Procedure Call (RPC):} allows a program to call a procedure on another machine.\\
