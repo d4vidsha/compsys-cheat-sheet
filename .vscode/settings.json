@@ -20,10 +20,12 @@
         "checkpointing",
         "explus",
         "FCFS",
+        "Interdomain",
         "MITM",
         "multicol",
         "parallelisable",
         "QUIC",
-        "SRTF"
+        "SRTF",
+        "Traceroute"
     ]
 }
