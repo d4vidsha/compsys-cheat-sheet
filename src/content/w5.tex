@@ -1,1 +1,17 @@
 \section{W5: PKI, Certificates, TLS}
+\textbf{Message authentication code (MAC):} is a cryptographic checksum on data that uses a secret key. Verifies data integrity of message. t = Mac(s,m); b = Verify(s,m,t).\\
+\textbf{Authenticated encryption:} is a symmetric encryption scheme that provides both confidentiality and integrity. c = Encrypt(sk,m); t = Mac(s,c); then verify with Verify(s,t,c) and does not need to decrypt.\\
+\textbf{Diffie-Hellman key exchange:} is a key agreement protocol that allows two parties to establish a shared secret over an insecure channel.\\
+$g = \text{generator}, p = \text{prime}, x = \text{private key}, y = \text{private key}$\\
+$X = g^x \mod p = \text{public key}, Y = g^y \mod p = \text{public key}$\\
+$s = Y^x \mod p = X^y \mod p = g^{xy} \mod p = \text{shared secret}$.\\
+DH is susceptible to MITM attacks if no authentication using public keys/asymmetric cryptography. No authentication DH is called Anonymous DH (and should never be used).\\
+
+\subsection{Digital certificates and PKI}
+\textbf{Why digital certificates?} It securely associates identities with public keys.\\
+\textbf{Why PKI?} It is a system of digital certificates, certificate authorities (CAs), and other registration authorities that verify and authenticate the validity of each party involved in an electronic transaction.\\
+
+\subsection{TLS}
+\textbf{Why TLS?} It provides secure communication over internet.\\
+\textbf{Example usage:} HTTPS = HTTP + TLS.\\
+\textbf{TLS handshake:} is a protocol that allows two parties to negotiate parameters of subsequent interactions and establish a set of shared secret keys.\\

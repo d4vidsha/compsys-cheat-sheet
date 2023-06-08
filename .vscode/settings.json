@@ -15,5 +15,13 @@
             ],
             "env": {}
         }
+    ],
+    "cSpell.words": [
+        "explus",
+        "FCFS",
+        "MITM",
+        "multicol",
+        "parallelisable",
+        "SRTF"
     ]
 }
