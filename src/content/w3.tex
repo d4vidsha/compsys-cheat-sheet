@@ -14,4 +14,19 @@
 \subsection{Memory management}
 \textbf{Why Memory Management?} Support multiprogramming. Secure isolation between processes/threads and OS memory. Enables virtual memory which allows processes/threads to use more memory than is physically available.\\
 \textbf{No memory abstraction:} Use swap space on disk. Multiplex physical memory.\\
-\textbf{Memory abstraction:} 
+
+\subsubsection{Memory abstraction}
+\textbf{Logical address space:} set of addresses that a process/thread can use which are mapped to physical addresses.\\
+\textbf{Base and limit registers:} base register holds start address of process/thread, limit register holds size of process/thread.\\
+\includegraphics[width=\linewidth]{figs/base-and-limit-registers.png}
+\textbf{Memory management unit (MMU):} hardware device that maps logical addresses to physical addresses.\\
+\textbf{Manage free memory:} using bitmap or linked list.\\
+\includegraphics[width=\linewidth]{figs/memory-management.png}
+
+\subsubsection{Virtual memory}
+\textbf{Why virtual memory?} Processes/threads can use more memory than is physically available.\\
+\textbf{Page table:} maps virtual pages to physical pages.\\
+\includegraphics[width=0.4\linewidth]{figs/paging-model.png}
+\includegraphics[width=0.45\linewidth]{figs/mmu-with-tlb.png}\\
+\textbf{Translation Lookaside Buffer (TLB):} cache for page table, faster than main memory, speeds up address translation.\\
+\textbf{Page replacement algorithms for TLB:} \textit{NRU} (Not Recently Used, R and M bit, 4 classes between referenced and modified).\\
