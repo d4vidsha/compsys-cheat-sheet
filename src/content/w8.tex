@@ -17,10 +17,13 @@
 
 \subsection{TCP congestion control}
 \textbf{Slow start:} increase congestion window size exponentially until a threshold.\\
+\textbf{Round trip time:} time taken for a packet to be sent and acknowledged/received.\\
 
 \subsubsection{Macroscopic model}
+Let $W$ be the congestion window size, $p$ be the packet loss rate.\\
 \textbf{Average increase in congestion window size:} $$\frac{(1-p)}{W} - p \frac{W}{2}$$
-\textbf{Equilibrium point:} $$\frac{(1-p)}{W} - p \frac{W}{2} = 0 \implies W \approx \sqrt{\frac{2}{p}}$$
+\textbf{Equilibrium point:} occurs when the average increase in congestion window size is zero.
+$$\frac{(1-p)}{W} - p \frac{W}{2} = 0 \implies W \approx \sqrt{\frac{2}{p}}$$
 \textbf{Rate:} $$\frac{W}{T} \approx \frac{1}{T} \sqrt{\frac{2}{p}} \text{ where } T = \text{round trip time}$$
 This means for a given packet loss rate, the rate of increase of congestion window size is inversely proportional to the round trip time.\\
 
